@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Bienvenida</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0078d7;
+            color: white;
+            padding: 20px 0;
+            animation: slide-down 1s ease-out;
+        }
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        .menu-item {
+            flex: 1 1 calc(33.333% - 20px);
+            box-sizing: border-box;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transform: scale(1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            animation: fade-in 1.2s ease-out forwards;
+        }
+        .menu-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .menu-title {
+            background-color: #005bb5;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .menu-item a {
+            display: block;
+            padding: 20px;
+            color: #0078d7;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .menu-item a:hover {
+            background-color: #0078d7;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .menu-item {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .menu-item {
+                flex: 1 1 100%;
+            }
+        }
+
+        /* Animaciones */
+        @keyframes slide-down {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>¡Bienvenidos, somos el grupo número 10!</h1>
+        <p>Estos son nuestros trabajos realizados durante el semestre en Arquitectura de Sistemas Operativos</p>
+    </header>
+    <div class="menu">
+        <div class="menu-item" style="animation-delay: 0s;">
+            <div class="menu-title">Guía Práctica 1</div>
+            <a href="pagina1.html">Ir a Opción 1</a>
+        </div>
+        <div class="menu-item" style="animation-delay: 0.1s;">
+            <div class="menu-title">Guía Práctica 2</div>
+            <a href="pagina2.html">Ir a Opción 2</a>
+        </div>
+        <div class="menu-item" style="animation-delay: 0.2s;">
+            <div class="menu-title">Guía Práctica 3</div>
+            <a href="pagina3.html">Ir a Opción 3</a>
+        </div>
+        <div class="menu-item" style="animation-delay: 0.3s;">
+            <div class="menu-title">Guía Práctica 4</div>
+            <a href="pagina4.html">Ir a Opción 4</a>
+        </div>
+        <div class="menu-item" style="animation-delay: 0.4s;">
+            <div class="menu-title">Guía Práctica 5</div>
+            <a href="pagina5.html">Ir a Opción 5</a>
+        </div>
+        <div class="menu-item" style="animation-delay: 0.5s;">
+            <div class="menu-title">Guía Práctica 6</div>
+            <a href="pagina6.html">Ir a Opción 6</a>
+        </div>
+        <div class="menu-item" style="animation-delay: 0.6s;">
+            <div class="menu-title">Guía Práctica 7</div>
+            <a href="pagina7.html">Ir a Opción 7</a>
+        </div>
+        <div class="menu-item" style="animation-delay: 0.7s;">
+            <div class="menu-title">Guía Práctica 8</div>
+            <a href="pagina8.html">Ir a Opción 8</a>
+        </div>
+        <div class="menu-item" style="animation-delay: 0.8s;">
+            <div class="menu-title">Guía Práctica 9</div>
+            <a href="pagina9.html">Ir a Opción 9</a>
+        </div>
+    </div>
+</body>
+</html>
